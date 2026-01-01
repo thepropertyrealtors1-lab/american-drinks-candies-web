@@ -1,17 +1,28 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, Package, Globe, Award, Truck } from "lucide-react";
+import { ArrowRight, Package, Globe, Award, Truck, ChevronLeft, ChevronRight } from "lucide-react";
 import { useProducts } from "@/hooks/use-products";
 import { useCategories } from "@/hooks/use-categories";
 import { ProductCard } from "@/components/ProductCard";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { useState } from "react";
 
 export default function Home() {
   const { data: products, isLoading: productsLoading } = useProducts();
   const { data: categories, isLoading: categoriesLoading } = useCategories();
+  const [sliderIndex, setSliderIndex] = useState(0);
 
   const featuredProducts = products?.filter(p => p.isFeatured).slice(0, 4) || [];
+  const allProductsForSlider = products || [];
+  
+  const handleSliderNext = () => {
+    setSliderIndex((prev) => (prev + 1) % Math.max(allProductsForSlider.length - 4, 1));
+  };
+
+  const handleSliderPrev = () => {
+    setSliderIndex((prev) => (prev - 1 + Math.max(allProductsForSlider.length - 4, 1)) % Math.max(allProductsForSlider.length - 4, 1));
+  };
 
   return (
     <div className="min-h-screen bg-background font-sans flex flex-col">
@@ -65,6 +76,95 @@ export default function Home() {
                 </Link>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* REFRESHING DRINKS SLIDER */}
+        <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+                <span className="text-secondary">REFRESHING</span>{" "}
+                <span className="text-primary">DRINKS WE DELIVER</span>
+              </h2>
+              <div className="h-1 w-20 bg-primary mx-auto"></div>
+            </div>
+
+            {/* Slider Container */}
+            <div className="relative">
+              {/* Left Arrow */}
+              <button
+                onClick={handleSliderPrev}
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-primary hover:bg-primary/90 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 active:scale-95 group"
+                data-testid="button-slider-prev"
+              >
+                <ChevronLeft className="h-6 w-6 group-hover:-translate-x-1 transition-transform" />
+              </button>
+
+              {/* Right Arrow */}
+              <button
+                onClick={handleSliderNext}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-primary hover:bg-primary/90 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 active:scale-95 group"
+                data-testid="button-slider-next"
+              >
+                <ChevronRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </button>
+
+              {/* Slider Grid */}
+              <div className="px-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {allProductsForSlider.slice(sliderIndex, sliderIndex + 4).map((product, idx) => (
+                    <motion.div
+                      key={`${product.id}-${idx}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.1, duration: 0.5 }}
+                      className="group flex flex-col items-center justify-center cursor-pointer"
+                    >
+                      <motion.div
+                        whileHover={{ scale: 1.15, rotateY: 10 }}
+                        transition={{ duration: 0.3 }}
+                        className="relative h-64 w-40 flex items-center justify-center perspective"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <img
+                          src={product.imageUrl}
+                          alt={product.name}
+                          className="h-full w-full object-contain drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300"
+                          data-testid={`img-product-${product.id}`}
+                        />
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileHover={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="mt-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      >
+                        <h3 className="text-sm font-bold text-secondary uppercase tracking-wider">{product.name}</h3>
+                        <p className="text-primary font-display text-lg mt-2">{product.price}</p>
+                      </motion.div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Pagination Dots */}
+              <div className="flex justify-center gap-2 mt-12">
+                {Array.from({ length: Math.max(Math.ceil((allProductsForSlider.length || 0) / 4) - 1, 0) }).map((_, idx) => (
+                  <motion.button
+                    key={idx}
+                    onClick={() => setSliderIndex(idx)}
+                    className={`h-3 rounded-full transition-all ${
+                      idx === sliderIndex
+                        ? "bg-primary w-8"
+                        : "bg-gray-300 hover:bg-gray-400 w-3"
+                    }`}
+                    whileHover={{ scale: 1.2 }}
+                    data-testid={`button-dot-${idx}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
