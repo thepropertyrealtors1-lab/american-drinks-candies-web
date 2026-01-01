@@ -105,7 +105,7 @@ async function seedDatabase() {
       name: "Gummy Bears",
       description: "Assorted fruit flavored gummy bears.",
       price: "$3.49",
-      imageUrl: "https://images.unsplash.com/photo-1582058928232-216869aa053f",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
       categoryId: candies.id,
       isFeatured: true
     });
@@ -161,9 +161,97 @@ async function seedDatabase() {
       name: "Peanut Butter Cups",
       description: "Perfect combination of chocolate and peanut butter.",
       price: "$1.49",
-      imageUrl: "https://images.unsplash.com/photo-1582058928232-216869aa053f",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
       categoryId: candies.id,
       isFeatured: true
+    });
+    await storage.createProduct({
+      name: "Cheetos Crunchy",
+      description: "Crunchy and cheesy snack, 10 oz bag.",
+      price: "$3.99",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: chips.id,
+      isFeatured: true
+    });
+    await storage.createProduct({
+      name: "Coca-Cola Classic",
+      description: "The world's most iconic cola, 24 pack.",
+      price: "$14.99",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: sodas.id,
+      isFeatured: true
+    });
+    await storage.createProduct({
+      name: "Sprite Lemon Lime",
+      description: "Crisp and refreshing lemon-lime soda.",
+      price: "$8.49",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: sodas.id,
+      isFeatured: false
+    });
+    await storage.createProduct({
+      name: "Doritos Nacho Cheese",
+      description: "Bold nacho cheese flavor, family size.",
+      price: "$5.49",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: chips.id,
+      isFeatured: true
+    });
+    await storage.createProduct({
+      name: "Hershey's Chocolate Bar",
+      description: "Classic American chocolate bar, pack of 6.",
+      price: "$4.99",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: candies.id,
+      isFeatured: false
+    });
+    await storage.createProduct({
+      name: "Mountain Dew Voltage",
+      description: "Electric blue berry citrus soda.",
+      price: "$9.99",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: sodas.id,
+      isFeatured: true
+    });
+    await storage.createProduct({
+      name: "Lay's Wavy Chips",
+      description: "Wavy-cut classic salted potato chips.",
+      price: "$4.79",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: chips.id,
+      isFeatured: false
+    });
+    await storage.createProduct({
+      name: "Skittles Mix",
+      description: "Rainbow assortment of colorful candies.",
+      price: "$2.49",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: candies.id,
+      isFeatured: true
+    });
+    await storage.createProduct({
+      name: "Dr Pepper",
+      description: "Original blend of 23 flavors.",
+      price: "$7.99",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: sodas.id,
+      isFeatured: false
+    });
+    await storage.createProduct({
+      name: "Frito Lay Mix Variety",
+      description: "Assorted chips and snacks variety pack.",
+      price: "$12.99",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: chips.id,
+      isFeatured: true
+    });
+    await storage.createProduct({
+      name: "Starburst Fruit Chews",
+      description: "Fruity chewy candies in assorted flavors.",
+      price: "$2.99",
+      imageUrl: "https://images.unsplash.com/photo-1599599810694-a5d746b3e5e0?w=400&h=500&fit=crop",
+      categoryId: candies.id,
+      isFeatured: false
     });
   }
 }
