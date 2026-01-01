@@ -25,260 +25,144 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background font-sans flex flex-col">
+    <div className="min-h-screen bg-white font-sans flex flex-col">
       <Navbar />
 
       <main className="flex-grow">
-        {/* HERO SECTION */}
-        <section className="relative h-[600px] md:h-[700px] flex items-center overflow-hidden">
-          {/* Warehouse background */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-10" />
-            {/* Unsplash warehouse image */}
+        {/* HERO SECTION - REPLICA OF SIPNSNACK */}
+        <section className="relative min-h-[600px] flex items-center bg-[#002B49] overflow-hidden py-20">
+          <div className="absolute inset-0 z-0 opacity-20">
             <img 
-              src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop" 
-              alt="Warehouse" 
+              src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070" 
+              alt="Background" 
               className="w-full h-full object-cover"
             />
           </div>
-
-          <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          
+          <div className="relative z-20 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-3xl"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-white"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary/20 border border-primary/30 backdrop-blur-sm mb-6">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span className="text-primary font-bold text-xs uppercase tracking-widest">Global Distribution Partner</span>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight text-shadow-lg">
-                Top Rated <br />
-                <span className="text-primary">American Drinks</span> <br />
-                & Candies Exporter
+              <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+                Global Beverage & <br />
+                <span className="text-[#00A9E0]">Snack Exporter</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
-                We specialize in bulk wholesale export of premium American beverages and confectionery to markets worldwide. Fast, reliable, and professional.
+              <p className="text-xl text-gray-200 mb-8 max-w-xl">
+                SipNSnack is your trusted partner for exporting US snack and beverage brands from our shores to your stores!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="/products" 
-                  className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded text-center font-bold uppercase tracking-widest shadow-lg shadow-primary/25 transition-all hover:scale-105"
-                >
-                  View Catalog
+              <div className="flex flex-wrap gap-4">
+                <Link href="/quote" className="bg-[#E87722] hover:bg-[#D66A1F] text-white px-8 py-4 rounded font-bold uppercase tracking-widest transition-all">
+                  Request Pricing
                 </Link>
-                <Link 
-                  href="/quote" 
-                  className="bg-white/10 hover:bg-white/20 backdrop-blur text-white border border-white/20 px-8 py-4 rounded text-center font-bold uppercase tracking-widest transition-all"
-                >
-                  Get a Quote
-                </Link>
+              </div>
+              <p className="mt-4 text-sm text-gray-400 italic">We Typically Respond Within 24 Hours</p>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="relative hidden lg:block"
+            >
+              <div className="grid grid-cols-3 gap-4">
+                <img src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png" alt="Ghost" className="animate-bounce" style={{ animationDuration: '3s' }} />
+                <img src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/takis.png" alt="Takis" className="animate-bounce" style={{ animationDuration: '4s' }} />
+                <img src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png" alt="Monster" className="animate-bounce" style={{ animationDuration: '5s' }} />
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* REFRESHING DRINKS SLIDER */}
-        <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                <span className="text-secondary">REFRESHING</span>{" "}
-                <span className="text-primary">DRINKS WE DELIVER</span>
+        {/* REFRESHING SECTION */}
+        <section className="py-20 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16 relative">
+              <span className="absolute -top-10 left-1/2 -translate-x-1/2 text-9xl font-bold text-gray-100 uppercase select-none z-0">Refreshment</span>
+              <h2 className="relative z-10 text-4xl md:text-5xl font-display font-bold">
+                <span className="text-[#002B49]">REFRESHING</span> <span className="text-[#00A9E0]">DRINKS WE DELIVER</span>
               </h2>
-              <div className="h-1 w-20 bg-primary mx-auto"></div>
             </div>
-
-            {/* Slider Container */}
-            <div className="relative">
-              {/* Left Arrow */}
-              <button
-                onClick={handleSliderPrev}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-primary hover:bg-primary/90 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 active:scale-95 group"
-                data-testid="button-slider-prev"
-              >
-                <ChevronLeft className="h-6 w-6 group-hover:-translate-x-1 transition-transform" />
-              </button>
-
-              {/* Right Arrow */}
-              <button
-                onClick={handleSliderNext}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-primary hover:bg-primary/90 text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 active:scale-95 group"
-                data-testid="button-slider-next"
-              >
-                <ChevronRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
-              </button>
-
-              {/* Slider Grid */}
-              <div className="px-20">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                  {allProductsForSlider.slice(sliderIndex, sliderIndex + 4).map((product, idx) => (
-                    <motion.div
-                      key={`${product.id}-${idx}`}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: idx * 0.1, duration: 0.5 }}
-                      className="group flex flex-col items-center justify-center cursor-pointer"
-                    >
-                      <motion.div
-                        whileHover={{ scale: 1.15, rotateY: 10 }}
-                        transition={{ duration: 0.3 }}
-                        className="relative h-64 w-40 flex items-center justify-center perspective"
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <img
-                          src={product.imageUrl}
-                          alt={product.name}
-                          className="h-full w-full object-contain drop-shadow-lg group-hover:drop-shadow-2xl transition-all duration-300"
-                          data-testid={`img-product-${product.id}`}
-                        />
-                      </motion.div>
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileHover={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="mt-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      >
-                        <h3 className="text-sm font-bold text-secondary uppercase tracking-wider">{product.name}</h3>
-                        <p className="text-primary font-display text-lg mt-2">{product.price}</p>
-                      </motion.div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Pagination Dots */}
-              <div className="flex justify-center gap-2 mt-12">
-                {Array.from({ length: Math.max(Math.ceil((allProductsForSlider.length || 0) / 4) - 1, 0) }).map((_, idx) => (
-                  <motion.button
-                    key={idx}
-                    onClick={() => setSliderIndex(idx)}
-                    className={`h-3 rounded-full transition-all ${
-                      idx === sliderIndex
-                        ? "bg-primary w-8"
-                        : "bg-gray-300 hover:bg-gray-400 w-3"
-                    }`}
-                    whileHover={{ scale: 1.2 }}
-                    data-testid={`button-dot-${idx}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FEATURES GRID */}
-        <section className="bg-primary py-12 border-y border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { icon: Globe, title: "Global Shipping", desc: "Exporting to over 50 countries" },
-                { icon: Package, title: "Bulk Wholesale", desc: "Competitive pallet & container pricing" },
-                { icon: Award, title: "Top Brands", desc: "Authentic major American brands" },
-                { icon: Truck, title: "Fast Logistics", desc: "Efficient supply chain management" },
-              ].map((feature, idx) => (
-                <div key={idx} className="flex items-center gap-4 text-white">
-                  <div className="p-3 bg-white/10 rounded-lg">
-                    <feature.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-lg uppercase leading-none mb-1">{feature.title}</h3>
-                    <p className="text-white/80 text-sm">{feature.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CATEGORIES SECTION */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-display font-bold text-secondary mb-4">Our Categories</h2>
-              <div className="h-1 w-20 bg-primary mx-auto mb-4"></div>
-              <p className="text-gray-500 max-w-2xl mx-auto">Explore our extensive range of authentic American products ready for export.</p>
-            </div>
-
-            {categoriesLoading ? (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-pulse">
-                {[1, 2, 3].map(i => <div key={i} className="h-64 bg-gray-200 rounded-xl"></div>)}
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {categories?.map((category) => (
-                  <Link key={category.id} href={`/products?category=${category.slug}`}>
-                    <div className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-lg">
-                      <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors z-10" />
-                      <img 
-                        src={category.imageUrl} 
-                        alt={category.name}
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-6">
-                        <h3 className="text-3xl font-display font-bold text-white uppercase tracking-wider mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                          {category.name}
-                        </h3>
-                        <span className="bg-primary text-white px-6 py-2 rounded font-bold uppercase text-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
-                          Browse Collection
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* FEATURED PRODUCTS */}
-        <section className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-end mb-12">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-display font-bold text-secondary mb-2">Featured Products</h2>
-                <div className="h-1 w-20 bg-primary"></div>
-              </div>
-              <Link href="/products" className="hidden md:flex items-center gap-2 text-secondary font-bold hover:text-primary transition-colors uppercase tracking-wide">
-                View All <ArrowRight className="h-5 w-5" />
-              </Link>
-            </div>
-
-            {productsLoading ? (
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-pulse">
-                {[1, 2, 3, 4].map(i => <div key={i} className="h-80 bg-gray-200 rounded-xl"></div>)}
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {featuredProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
-            )}
             
-            <div className="mt-12 text-center md:hidden">
-               <Link href="/products" className="bg-secondary text-white px-8 py-3 rounded font-bold uppercase inline-flex items-center gap-2">
-                View All Products <ArrowRight className="h-4 w-4" />
-              </Link>
+            <div className="flex overflow-hidden relative group">
+              <motion.div 
+                animate={{ x: [0, -1000] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="flex gap-12 items-center"
+              >
+                {[...allProductsForSlider, ...allProductsForSlider].map((product, i) => (
+                  <div key={i} className="min-w-[200px] text-center group/item cursor-pointer">
+                    <motion.img 
+                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      src={product.imageUrl} 
+                      className="h-48 mx-auto object-contain mb-4"
+                    />
+                    <h3 className="font-bold text-[#002B49] group-hover/item:text-[#00A9E0] transition-colors">{product.name}</h3>
+                  </div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* CTA SECTION */}
-        <section className="bg-secondary py-20 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">Ready to Order in Bulk?</h2>
-            <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-              Get the best wholesale prices on authentic American products. Contact us today for a custom quote tailored to your business needs.
-            </p>
-            <Link 
-              href="/quote" 
-              className="bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded text-lg font-bold uppercase tracking-widest shadow-xl shadow-primary/20 transition-all hover:-translate-y-1 inline-block"
-            >
-              Request a Quote
-            </Link>
+        {/* POWER UP SECTION */}
+        <section className="grid grid-cols-1 md:grid-cols-4 min-h-[400px]">
+          <div className="bg-[#8DC63F] p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
+            <motion.img whileHover={{ scale: 1.1 }} src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png" className="h-64 mb-6" />
+            <Link href="/quote" className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Get Monster</Link>
+          </div>
+          <div className="bg-[#002B49] p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
+            <motion.img whileHover={{ scale: 1.1 }} src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/beverage-and-snacks-distributor-021.webp" className="h-64 mb-6" />
+            <Link href="/quote" className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Get RedBull</Link>
+          </div>
+          <div className="bg-[#9E1B32] p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
+            <motion.img whileHover={{ scale: 1.1 }} src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png" className="h-64 mb-6" />
+            <Link href="/quote" className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Get Ghost</Link>
+          </div>
+          <div className="bg-[#FFCD00] p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
+            <motion.img whileHover={{ scale: 1.1 }} src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/celsius.png" className="h-64 mb-6" />
+            <Link href="/quote" className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Get Celsius</Link>
+          </div>
+        </section>
+
+        {/* INFO SECTION */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h4 className="text-[#00A9E0] font-bold uppercase tracking-widest mb-4">Convenient Beverage and Snack Exporter</h4>
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-[#002B49] mb-8 uppercase leading-tight">Work With an All Inclusive Exporter</h2>
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+                SipNSnack International is a bulk beverage and snack distributor for countries outside of the US. We are headquartered in Miami and have many warehouses that are ready to ship globally. We sell Coke, Fanta, Gatorade, Monster, Pepsi, and hundreds of other brands.
+              </p>
+              <div className="flex flex-wrap gap-6 items-center">
+                <Link href="/quote" className="bg-[#E87722] text-white px-10 py-4 rounded font-bold uppercase tracking-widest">Request Pricing</Link>
+                <a href="tel:19546042925" className="text-2xl font-bold text-[#002B49] border-2 border-[#002B49]/10 px-6 py-3 rounded">(954) 604-2925</a>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img src="https://sipnsnackinternational.com/wp-content/uploads/2025/08/Global-Beverage-Snack-Exporter-service-near-me-3.jpg" className="rounded shadow-lg" />
+              <img src="https://sipnsnackinternational.com/wp-content/uploads/2025/08/Global-Beverage-Snack-Exporter-service-near-me-4.jpg" className="rounded shadow-lg" />
+              <img src="https://sipnsnackinternational.com/wp-content/uploads/2025/08/Global-Beverage-Snack-Exporter-service-near-me-1.webp" className="rounded shadow-lg" />
+              <img src="https://sipnsnackinternational.com/wp-content/uploads/2025/08/Global-Beverage-Snack-Exporter-service-near-me-2.webp" className="rounded shadow-lg" />
+            </div>
+          </div>
+        </section>
+
+        {/* STATS SECTION */}
+        <section className="bg-[#002B49] py-20">
+          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div>
+              <div className="text-5xl font-bold text-[#00A9E0] mb-2">25+</div>
+              <div className="text-white uppercase tracking-widest font-bold">Years in Service</div>
+            </div>
+            <div>
+              <div className="text-5xl font-bold text-[#00A9E0] mb-2">200+</div>
+              <div className="text-white uppercase tracking-widest font-bold">Brands & Products</div>
+            </div>
+            <div>
+              <div className="text-5xl font-bold text-[#00A9E0] mb-2">500+</div>
+              <div className="text-white uppercase tracking-widest font-bold">Loyal Partners</div>
+            </div>
           </div>
         </section>
       </main>
