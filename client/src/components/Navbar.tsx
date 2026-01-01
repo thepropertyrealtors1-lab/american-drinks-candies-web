@@ -15,14 +15,14 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-[#002B49] border-b border-[#00A9E0]/20 shadow-xl">
+    <nav className="sticky top-0 z-50 w-full bg-black border-b border-primary/20 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="group flex items-center gap-2">
               <span className="font-display text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter">
-                SIPN<span className="text-[#00A9E0]">SNACK</span>
+                AMERICAN<span className="text-primary"> DRINKS</span>
               </span>
             </Link>
           </div>
@@ -34,8 +34,8 @@ export function Navbar() {
                 key={link.href} 
                 href={link.href}
                 className={cn(
-                  "font-sans font-bold text-sm uppercase tracking-widest transition-colors hover:text-[#00A9E0]",
-                  location === link.href ? "text-[#00A9E0]" : "text-white"
+                  "font-sans font-bold text-sm uppercase tracking-widest transition-colors hover:text-primary",
+                  location === link.href ? "text-primary" : "text-white"
                 )}
               >
                 {link.label}
@@ -43,7 +43,7 @@ export function Navbar() {
             ))}
             <Link 
               href="/quote" 
-              className="bg-[#E87722] hover:bg-[#D66A1F] text-white px-6 py-2.5 rounded font-bold uppercase tracking-wide text-sm shadow-lg transition-all"
+              className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded font-bold uppercase tracking-wide text-sm shadow-lg transition-all"
             >
               Request Pricing
             </Link>

@@ -30,7 +30,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* HERO SECTION - REPLICA OF SIPNSNACK */}
-        <section className="relative min-h-[600px] flex items-center bg-[#002B49] overflow-hidden py-20">
+        <section className="relative min-h-[600px] flex items-center bg-black overflow-hidden py-20">
           <div className="absolute inset-0 z-0 opacity-20">
             <img 
               src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070" 
@@ -45,15 +45,15 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               className="text-white"
             >
-              <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
-                Global Beverage & <br />
-                <span className="text-[#00A9E0]">Snack Exporter</span>
+              <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight uppercase">
+                American <br />
+                <span className="text-primary">Drinks & Candies</span>
               </h1>
-              <p className="text-xl text-gray-200 mb-8 max-w-xl">
-                SipNSnack is your trusted partner for exporting US snack and beverage brands from our shores to your stores!
+              <p className="text-xl text-gray-200 mb-8 max-w-xl leading-relaxed">
+                Your trusted partner for exporting top-rated American beverage and snack brands from our shores to your stores!
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/quote" className="bg-[#E87722] hover:bg-[#D66A1F] text-white px-8 py-4 rounded font-bold uppercase tracking-widest transition-all">
+                <Link href="/quote" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded font-bold uppercase tracking-widest transition-all">
                   Request Pricing
                 </Link>
               </div>
@@ -80,7 +80,7 @@ export default function Home() {
             <div className="text-center mb-16 relative">
               <span className="absolute -top-10 left-1/2 -translate-x-1/2 text-9xl font-bold text-gray-100 uppercase select-none z-0">Refreshment</span>
               <h2 className="relative z-10 text-4xl md:text-5xl font-display font-bold">
-                <span className="text-[#002B49]">REFRESHING</span> <span className="text-[#00A9E0]">DRINKS WE DELIVER</span>
+                <span className="text-black uppercase">REFRESHING</span> <span className="text-primary uppercase">DRINKS WE DELIVER</span>
               </h2>
             </div>
             
@@ -97,7 +97,7 @@ export default function Home() {
                       src={product.imageUrl} 
                       className="h-48 mx-auto object-contain mb-4"
                     />
-                    <h3 className="font-bold text-[#002B49] group-hover/item:text-[#00A9E0] transition-colors">{product.name}</h3>
+                    <h3 className="font-bold text-black group-hover/item:text-primary transition-colors uppercase tracking-tight">{product.name}</h3>
                   </div>
                 ))}
               </motion.div>
@@ -111,7 +111,7 @@ export default function Home() {
             <motion.img whileHover={{ scale: 1.1 }} src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png" className="h-64 mb-6" />
             <Link href="/quote" className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Get Monster</Link>
           </div>
-          <div className="bg-[#002B49] p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
+          <div className="bg-black p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
             <motion.img whileHover={{ scale: 1.1 }} src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/beverage-and-snacks-distributor-021.webp" className="h-64 mb-6" />
             <Link href="/quote" className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Get RedBull</Link>
           </div>
@@ -119,7 +119,7 @@ export default function Home() {
             <motion.img whileHover={{ scale: 1.1 }} src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png" className="h-64 mb-6" />
             <Link href="/quote" className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Get Ghost</Link>
           </div>
-          <div className="bg-[#FFCD00] p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
+          <div className="bg-primary p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
             <motion.img whileHover={{ scale: 1.1 }} src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/celsius.png" className="h-64 mb-6" />
             <Link href="/quote" className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">Get Celsius</Link>
           </div>
@@ -129,14 +129,14 @@ export default function Home() {
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h4 className="text-[#00A9E0] font-bold uppercase tracking-widest mb-4">Convenient Beverage and Snack Exporter</h4>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-[#002B49] mb-8 uppercase leading-tight">Work With an All Inclusive Exporter</h2>
+              <h4 className="text-primary font-bold uppercase tracking-widest mb-4">Convenient Beverage and Snack Exporter</h4>
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-8 uppercase leading-tight">Work With an All Inclusive Exporter</h2>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-                SipNSnack International is a bulk beverage and snack distributor for countries outside of the US. We are headquartered in Miami and have many warehouses that are ready to ship globally. We sell Coke, Fanta, Gatorade, Monster, Pepsi, and hundreds of other brands.
+                American Drinks & Candies is a bulk beverage and snack distributor for countries outside of the US. We are headquartered in Miami and have many warehouses that are ready to ship globally. We sell Coke, Fanta, Gatorade, Monster, Pepsi, and hundreds of other brands.
               </p>
               <div className="flex flex-wrap gap-6 items-center">
-                <Link href="/quote" className="bg-[#E87722] text-white px-10 py-4 rounded font-bold uppercase tracking-widest">Request Pricing</Link>
-                <a href="tel:19546042925" className="text-2xl font-bold text-[#002B49] border-2 border-[#002B49]/10 px-6 py-3 rounded">(954) 604-2925</a>
+                <Link href="/quote" className="bg-primary text-white px-10 py-4 rounded font-bold uppercase tracking-widest shadow-lg shadow-primary/20 transition-all">Request Pricing</Link>
+                <a href="tel:19546042925" className="text-2xl font-bold text-black border-2 border-black/10 px-6 py-3 rounded">(954) 604-2925</a>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -149,18 +149,18 @@ export default function Home() {
         </section>
 
         {/* STATS SECTION */}
-        <section className="bg-[#002B49] py-20">
+        <section className="bg-black py-20">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
-              <div className="text-5xl font-bold text-[#00A9E0] mb-2">25+</div>
+              <div className="text-5xl font-bold text-primary mb-2">25+</div>
               <div className="text-white uppercase tracking-widest font-bold">Years in Service</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-[#00A9E0] mb-2">200+</div>
+              <div className="text-5xl font-bold text-primary mb-2">200+</div>
               <div className="text-white uppercase tracking-widest font-bold">Brands & Products</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-[#00A9E0] mb-2">500+</div>
+              <div className="text-5xl font-bold text-primary mb-2">500+</div>
               <div className="text-white uppercase tracking-widest font-bold">Loyal Partners</div>
             </div>
           </div>
