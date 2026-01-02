@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { insertInquirySchema, type InsertInquiry } from "@shared/schema";
-import { useCreateInquiry } from "@/hooks/use-inquiries";
 import { useToast } from "@/hooks/use-toast";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -22,7 +20,9 @@ export default function Quote() {
     defaultValues: {
       name: "",
       email: "",
-      message: initialProduct ? `I'm interested in getting a quote for: ${initialProduct}` : "",
+      message: initialProduct
+        ? `I'm interested in getting a quote for: ${initialProduct}`
+        : "",
     },
   });
 
@@ -49,12 +49,15 @@ export default function Quote() {
 
       <main className="flex-grow">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-80px)]">
-          
           {/* Left Side: Info */}
           <div className="bg-secondary text-white p-12 lg:p-24 flex flex-col justify-center">
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-primary">Get a Fast Quote</h1>
+            <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-primary">
+              Get a Fast Quote
+            </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed mb-12 max-w-lg">
-              Looking to order in bulk? Fill out the form and our sales team will get back to you within 24 hours with pricing and shipping details.
+              Looking to order in bulk? Fill out the form and our sales team
+              will get back to you within 24 hours with pricing and shipping
+              details.
             </p>
 
             <div className="space-y-8">
@@ -63,8 +66,12 @@ export default function Quote() {
                   <span className="text-primary font-bold text-xl">1</span>
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-bold mb-1">Tell us what you need</h3>
-                  <p className="text-gray-400">Specify products and estimated quantities.</p>
+                  <h3 className="font-display text-xl font-bold mb-1">
+                    Tell us what you need
+                  </h3>
+                  <p className="text-gray-400">
+                    Specify products and estimated quantities.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -72,8 +79,12 @@ export default function Quote() {
                   <span className="text-primary font-bold text-xl">2</span>
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-bold mb-1">We prepare your offer</h3>
-                  <p className="text-gray-400">We calculate best shipping rates and bulk discounts.</p>
+                  <h3 className="font-display text-xl font-bold mb-1">
+                    We prepare your offer
+                  </h3>
+                  <p className="text-gray-400">
+                    We calculate best shipping rates and bulk discounts.
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -81,8 +92,12 @@ export default function Quote() {
                   <span className="text-primary font-bold text-xl">3</span>
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-bold mb-1">Start shipping</h3>
-                  <p className="text-gray-400">Once approved, we handle logistics to your port.</p>
+                  <h3 className="font-display text-xl font-bold mb-1">
+                    Start shipping
+                  </h3>
+                  <p className="text-gray-400">
+                    Once approved, we handle logistics to your port.
+                  </p>
                 </div>
               </div>
             </div>
@@ -91,7 +106,7 @@ export default function Quote() {
           {/* Right Side: Form */}
           <div className="bg-white p-12 lg:p-24 flex flex-col justify-center items-center">
             {isSuccess ? (
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 className="text-center max-w-md"
@@ -99,11 +114,14 @@ export default function Quote() {
                 <div className="mx-auto w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600">
                   <CheckCircle className="w-12 h-12" />
                 </div>
-                <h2 className="text-3xl font-display font-bold text-secondary mb-4">Request Sent!</h2>
+                <h2 className="text-3xl font-display font-bold text-secondary mb-4">
+                  Request Sent!
+                </h2>
                 <p className="text-gray-500 mb-8">
-                  Thank you for your interest. Our team will review your inquiry and contact you shortly at {form.getValues("email")}.
+                  Thank you for your interest. Our team will review your inquiry
+                  and contact you shortly at {form.getValues("email")}.
                 </p>
-                <button 
+                <button
                   onClick={() => setIsSuccess(false)}
                   className="text-primary font-bold hover:underline uppercase tracking-wide"
                 >
@@ -112,23 +130,33 @@ export default function Quote() {
               </motion.div>
             ) : (
               <div className="w-full max-w-md">
-                <h2 className="text-2xl font-bold text-secondary mb-8 font-display uppercase">Inquiry Form</h2>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  
+                <h2 className="text-2xl font-bold text-secondary mb-8 font-display uppercase">
+                  Inquiry Form
+                </h2>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
                   <div className="space-y-2">
-                    <label className="text-sm font-bold uppercase tracking-wide text-gray-700">Full Name</label>
+                    <label className="text-sm font-bold uppercase tracking-wide text-gray-700">
+                      Full Name
+                    </label>
                     <input
                       {...form.register("name")}
                       className="w-full px-4 py-3 rounded bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                       placeholder="John Doe"
                     />
                     {form.formState.errors.name && (
-                      <span className="text-red-500 text-xs">{form.formState.errors.name.message}</span>
+                      <span className="text-red-500 text-xs">
+                        {form.formState.errors.name.message}
+                      </span>
                     )}
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-bold uppercase tracking-wide text-gray-700">Business Email</label>
+                    <label className="text-sm font-bold uppercase tracking-wide text-gray-700">
+                      Business Email
+                    </label>
                     <input
                       {...form.register("email")}
                       type="email"
@@ -136,12 +164,16 @@ export default function Quote() {
                       placeholder="john@company.com"
                     />
                     {form.formState.errors.email && (
-                      <span className="text-red-500 text-xs">{form.formState.errors.email.message}</span>
+                      <span className="text-red-500 text-xs">
+                        {form.formState.errors.email.message}
+                      </span>
                     )}
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-bold uppercase tracking-wide text-gray-700">Message / Product Details</label>
+                    <label className="text-sm font-bold uppercase tracking-wide text-gray-700">
+                      Message / Product Details
+                    </label>
                     <textarea
                       {...form.register("message")}
                       rows={5}
@@ -149,7 +181,9 @@ export default function Quote() {
                       placeholder="I'm interested in ordering..."
                     />
                     {form.formState.errors.message && (
-                      <span className="text-red-500 text-xs">{form.formState.errors.message.message}</span>
+                      <span className="text-red-500 text-xs">
+                        {form.formState.errors.message.message}
+                      </span>
                     )}
                   </div>
 
