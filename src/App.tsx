@@ -9,6 +9,8 @@ import Products from "@/pages/Products";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Quote from "@/pages/Quote";
+import "swiper/css";
+import "swiper/css/pagination";
 
 function Router() {
   return (

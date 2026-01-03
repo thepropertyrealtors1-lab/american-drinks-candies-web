@@ -59,3 +59,22 @@
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
   }
 }
+/* Swiper pagination positioning */
+.swiper-pagination {
+  position: static !important;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Dots */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #cfcfcf;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6a00;
+}
+

@@ -403,10 +403,10 @@ export default function Home() {
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0">
             <img
-    src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2070"
-    alt="Container Ship"
-    className="w-full h-full object-cover object-right"
-  />
+              src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2070"
+              alt="Container Ship"
+              className="w-full h-full object-cover object-right"
+            />
 
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/20" />
           </div>

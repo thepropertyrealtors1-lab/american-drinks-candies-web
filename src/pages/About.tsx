@@ -1,76 +1,124 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Award, Globe, Heart, ShieldCheck } from "lucide-react";
+import HeroSection from "@/components/HeroSecction";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "./style.css";
+import "swiper/css";
+import "swiper/css/pagination";
+
+const images = [
+  "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=1600",
+  "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1600",
+  "https://images.unsplash.com/photo-1565799557185-cc27f9d9f21b?q=80&w=1600",
+];
 
 export default function About() {
   return (
     <div className="min-h-screen bg-background font-sans flex flex-col">
       <Navbar />
 
-      <div className="bg-secondary py-20 text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6">About Us</h1>
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-          Connecting the world with authentic American flavors since 2010.
-        </p>
-      </div>
-
       <main className="flex-grow">
-        {/* Story Section */}
-        <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-display font-bold text-secondary mb-6">Our Mission</h2>
-              <div className="h-1 w-20 bg-primary mb-8"></div>
-              <div className="space-y-6 text-gray-600 leading-relaxed">
-                <p>
-                  At American Drinks & Candies, we believe that taste knows no borders. Founded in Miami, a global gateway for trade, we started with a simple mission: to make America's most beloved snacks and beverages accessible to everyone, everywhere.
-                </p>
-                <p>
-                  What began as a small distribution operation has grown into a premier export company, serving wholesalers, retailers, and distributors in over 50 countries. We bridge the gap between top American manufacturers and international markets.
-                </p>
-                <p>
-                  We pride ourselves on efficiency, reliability, and competitive pricing. Whether you are a small boutique shop in Europe or a large supermarket chain in Asia, we treat every order with the same level of care and professionalism.
+        {/* HERO SECTION */}
+        <HeroSection
+          titleTop="About American"
+          titleBottom="Drinks"
+          leftProducts={[
+            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+          ]}
+          rightProducts={[
+            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+          ]}
+        />
+
+        {/* ABOUT SPLIT SECTION */}
+        <section className="relative bg-white py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+        
+            <div className="relative min-h-[520px] flex items-center">
+          
+              <div className="absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1800"
+                  alt="Warehouse"
+                  className="w-full h-full object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-l from-white via-white to-white/40" />
+              </div>
+
+         
+              <div className="relative z-10 pl-40 pr-10 max-w-xl text-left">
+                <h2 className="text-4xl font-extrabold uppercase text-[#007aa3] mb-6">
+                  About Us
+                </h2>
+
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  SipNSnack International is a bulk beverage and snack
+                  distributor for countries outside of the US. We are
+                  headquartered in Miami and have warehouses ready to ship
+                  globally.
+                  <br />
                 </p>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-primary/10 z-10"></div>
-              <img 
-                src="https://pixabay.com/get/gb0e24b098d95a5e7336fc236cae4e7ea29473933b0e8116223bb2b1015d9cc0d4213594cf90e6574fb1a7b76a0b90fe0e8a517886ae977642846ac9f2da8f7f7_1280.jpg" 
-                alt="Logistics warehouse" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </section>
 
-        {/* Values Section */}
-        <section className="bg-gray-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-display font-bold text-secondary mb-4">Why Choose Us?</h2>
-              <div className="h-1 w-20 bg-primary mx-auto"></div>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { icon: ShieldCheck, title: "Reliability", desc: "We deliver on time, every time. Our logistics network is optimized for global efficiency." },
-                { icon: Award, title: "Quality", desc: "100% authentic products sourced directly from manufacturers." },
-                { icon: Heart, title: "Service", desc: "Dedicated account managers who understand your market needs." },
-                { icon: Globe, title: "Reach", desc: "Experience in navigating complex international customs and regulations." },
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow border-t-4 border-primary">
-                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
-                    <item.icon className="h-7 w-7" />
-                  </div>
-                  <h3 className="font-display font-bold text-xl mb-3">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
+            <div className="flex flex-col items-center justify-center">
+              <Swiper
+                modules={[Pagination, Autoplay]}
+                autoplay={{ delay: 4500 }}
+                loop
+                pagination={{ clickable: true }}
+                className="w-full max-w-[560px]"
+              >
+                {images.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <img
+                      src={img}
+                      alt="Warehouse shipment"
+                      className="w-full h-[380px] object-cover"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </div>
         </section>
       </main>
+
+      {/* CTA SECTION */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2070"
+            alt="Container Ship"
+            className="w-full h-full object-cover object-right"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/20" />
+        </div>
+
+        <div className="relative z-10 text-center max-w-4xl px-6">
+          <h2 className="text-white text-5xl md:text-6xl font-bold uppercase mb-10 leading-tight">
+            Need a Trusted <br />
+            Beverage & Snack <br />
+            Export Partner?
+          </h2>
+
+          <a
+            href="/quote"
+            className="inline-block bg-primary text-white px-12 py-5 font-bold uppercase tracking-widest"
+          >
+            Request Pricing
+          </a>
+
+          <p className="mt-4 text-sm text-gray-300">
+            We Typically Respond Within 24 Hours
+          </p>
+        </div>
+      </section>
 
       <Footer />
     </div>

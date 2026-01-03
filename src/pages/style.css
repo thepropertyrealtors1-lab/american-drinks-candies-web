@@ -1,0 +1,20 @@
+/* Force pagination below the swiper */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Normal dots */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #cfcfcf;
+  opacity: 1;
+  margin: 0 6px !important;
+}
+
+/* Active dot */
+.swiper-pagination-bullet-active {
+  background-color: #ff6a00;
+}
