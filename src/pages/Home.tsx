@@ -13,6 +13,116 @@ import { ProductCard } from "@/components/ProductCard";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useState } from "react";
+import ProductSwiper from "@/components/productSwiper/productSwiper";
+import ProductSlider from "@/components/productSlider/productSlider";
+import BrandsSection from "@/components/BrandSection";
+const sliderProducts = [
+  {
+    id: 1,
+    name: "Coca-Cola",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/coca-cola.png",
+  },
+  {
+    id: 2,
+    name: "Fanta",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/fanta.png",
+  },
+  {
+    id: 3,
+    name: "Pepsi",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/pepsi.png",
+  },
+  {
+    id: 4,
+    name: "Dr Pepper",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/dr-pepper.png",
+  },
+  {
+    id: 5,
+    name: "Celsius",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/celsius.png",
+  },
+  {
+    id: 6,
+    name: "Dr Pepper",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/dr-pepper.png",
+  },
+];
+const energyProducts2 = [
+  {
+    id: 1,
+    name: "Monster",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+    bgColor: "#8DC63F",
+  },
+  {
+    id: 2,
+    name: "Red Bull",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/redbull.png",
+    bgColor: "#1F2A44",
+  },
+];
+const energyProducts4 = [
+  {
+    id: 1,
+    name: "Monster",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+    bgColor: "#8DC63F",
+  },
+  {
+    id: 2,
+    name: "Red Bull",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/redbull.png",
+    bgColor: "#1F2A44",
+  },
+  {
+    id: 3,
+    name: "Ghost",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png",
+    bgColor: "#9E1B32",
+  },
+  {
+    id: 4,
+    name: "Celsius",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/celsius.png",
+    bgColor: "#FFD200",
+  },
+];
+const energyProducts3 = [
+  {
+    id: 1,
+    name: "Monster",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+    bgColor: "#8DC63F",
+  },
+  {
+    id: 2,
+    name: "Red Bull",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/redbull.png",
+    bgColor: "#1F2A44",
+  },
+  {
+    id: 3,
+    name: "Ghost",
+    imageUrl:
+      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png",
+    bgColor: "#9E1B32",
+  },
+];
 
 export default function Home() {
   const [sliderIndex, setSliderIndex] = useState(0);
@@ -108,104 +218,133 @@ export default function Home() {
         </section>
 
         {/* REFRESHING SECTION */}
-        <section className="py-20 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-16 relative">
-              <span className="absolute -top-10 left-1/2 -translate-x-1/2 text-9xl font-bold text-gray-100 uppercase select-none z-0">
-                Refreshment
-              </span>
-              <h2 className="relative z-10 text-4xl md:text-5xl font-display font-bold">
-                <span className="text-black uppercase">REFRESHING</span>{" "}
-                <span className="text-primary uppercase">
-                  DRINKS WE DELIVER
-                </span>
-              </h2>
-            </div>
+        <section className="relative w-full bg-white overflow-hidden flex flex-col pb-32">
+          <div className="relative flex items-center justify-center py-24">
+            <span
+              className="
+                        absolute inset-0 flex items-center justify-center
+                        text-[10rem] md:text-[180px]
+                        font-extrabold uppercase
+                        text-gray-100
+                        select-none pointer-events-none
+                        whitespace-nowrap
+                      "
+            >
+              Refreshment
+            </span>
 
-            <div className="flex overflow-hidden relative group">
-              <motion.div
-                animate={{ x: [0, -1000] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="flex gap-12 items-center"
-              >
-                {[...allProductsForSlider, ...allProductsForSlider].map(
-                  (product, i) => (
-                    <div
-                      key={i}
-                      className="min-w-[200px] text-center group/item cursor-pointer"
-                    >
-                      <motion.img
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        src={product.imageUrl}
-                        className="h-48 mx-auto object-contain mb-4"
-                      />
-                      <h3 className="font-bold text-black group-hover/item:text-primary transition-colors uppercase tracking-tight">
-                        {product.name}
-                      </h3>
-                    </div>
-                  )
-                )}
-              </motion.div>
-            </div>
+            <h2
+              className="
+                          relative z-10
+                          text-5xl md:text-6xl lg:text-7xl
+                          font-display font-bold uppercase
+                          text-center
+                        "
+            >
+              <span className="text-black">Refreshing</span>{" "}
+              <span className="text-primary">Drinks We Deliver</span>
+            </h2>
+          </div>
+
+          <div className="relative w-full">
+            <ProductSwiper products={sliderProducts} />
           </div>
         </section>
 
-        {/* POWER UP SECTION */}
-        <section className="grid grid-cols-1 md:grid-cols-4 min-h-[400px]">
-          <div className="bg-[#8DC63F] p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
-            <motion.img
-              whileHover={{ scale: 1.1 }}
-              src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png"
-              className="h-64 mb-6"
-            />
-            <Link
-              href="/quote"
-              className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity"
+        {/* POWER UP SECTION back*/}
+        <div className="relative w-full bg-white overflow-hidden flex flex-col ">
+          <div className="relative flex items-center justify-center py-10 mb-10">
+            <span
+              className="
+                        absolute inset-0 flex items-center justify-center
+                        md:text-[150px]
+                        font-extrabold uppercase
+                        text-gray-100
+                        select-none pointer-events-none
+                        whitespace-nowrap
+                      "
             >
-              Get Monster
-            </Link>
+              Energy Drinks
+            </span>
+
+            <h2
+              className="
+                          relative z-10
+                          text-5xl md:text-6xl lg:text-7xl
+                          font-display font-bold uppercase
+                          text-center
+                        "
+            >
+              <span className="text-black">PowerUp with</span>{" "}
+              <span className="text-primary">Energy Drinks</span>
+            </h2>
           </div>
-          <div className="bg-black p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
-            <motion.img
-              whileHover={{ scale: 1.1 }}
-              src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/beverage-and-snacks-distributor-021.webp"
-              className="h-64 mb-6"
-            />
-            <Link
-              href="/quote"
-              className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity"
+          <ProductSlider items={energyProducts4} hoverEffect="back" />
+          <ProductSlider items={energyProducts3} hoverEffect="back" />
+        </div>
+        {/* REFRESHING SECTION 2*/}
+        <section className="relative w-full bg-white overflow-hidden flex flex-col pb-32">
+          <div className="relative flex items-center justify-center py-24">
+            <span
+              className="
+                        absolute inset-0 flex items-center justify-center
+                        text-[10rem] md:text-[180px]
+                        font-extrabold uppercase
+                        text-gray-100
+                        select-none pointer-events-none
+                        whitespace-nowrap
+                      "
             >
-              Get RedBull
-            </Link>
+              Water
+            </span>
+
+            <h2
+              className="
+                          relative z-10
+                          text-5xl md:text-6xl lg:text-7xl
+                          font-display font-bold uppercase
+                          text-center
+                        "
+            >
+              <span className="text-black">Water Brands</span>{" "}
+              <span className="text-primary">We Deliver</span>
+            </h2>
           </div>
-          <div className="bg-[#9E1B32] p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
-            <motion.img
-              whileHover={{ scale: 1.1 }}
-              src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png"
-              className="h-64 mb-6"
-            />
-            <Link
-              href="/quote"
-              className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity"
-            >
-              Get Ghost
-            </Link>
-          </div>
-          <div className="bg-primary p-10 flex flex-col justify-center items-center group cursor-pointer overflow-hidden">
-            <motion.img
-              whileHover={{ scale: 1.1 }}
-              src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/celsius.png"
-              className="h-64 mb-6"
-            />
-            <Link
-              href="/quote"
-              className="border-2 border-white text-white px-6 py-2 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity"
-            >
-              Get Celsius
-            </Link>
+
+          <div className="relative w-full">
+            <ProductSwiper products={sliderProducts} />
           </div>
         </section>
+        {/* POWER UP SECTION front*/}
+        <div className="relative w-full bg-white overflow-hidden flex flex-col ">
+          <div className="relative flex items-center justify-center py-10 mb-10">
+            <span
+              className="
+                        absolute inset-0 flex items-center justify-center
+                        md:text-[150px]
+                        font-extrabold uppercase
+                        text-gray-100
+                        select-none pointer-events-none
+                        whitespace-nowrap
+                      "
+            >
+              Snacks
+            </span>
 
+            <h2
+              className="
+                          relative z-10
+                          text-5xl md:text-6xl lg:text-7xl
+                          font-display font-bold uppercase
+                          text-center
+                        "
+            >
+              <span className="text-black">Crunchy</span>{" "}
+              <span className="text-primary">Bites</span>
+            </h2>
+          </div>
+          <ProductSlider items={energyProducts2} hoverEffect="front" />
+        </div>
         {/* INFO SECTION */}
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -258,7 +397,39 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* Brand SECTION */}
+        <BrandsSection />
+        {/* CTA SECTION */}
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+    src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2070"
+    alt="Container Ship"
+    className="w-full h-full object-cover object-right"
+  />
 
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/20" />
+          </div>
+          <div className="relative z-10 text-center max-w-4xl px-6">
+            <h2 className="text-white text-5xl md:text-6xl font-display font-bold uppercase mb-10 leading-tight">
+              Need a Trusted <br />
+              Beverage & Snack <br />
+              Export Partner?
+            </h2>
+
+            <Link
+              href="/quote"
+              className="inline-block bg-primary text-white px-12 py-5 font-bold uppercase tracking-widest"
+            >
+              Request Pricing
+            </Link>
+
+            <p className="mt-4 text-sm text-gray-300">
+              We Typically Respond Within 24 Hours
+            </p>
+          </div>
+          <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-black" />
+        </section>
         {/* STATS SECTION */}
         <section className="bg-black py-20">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
