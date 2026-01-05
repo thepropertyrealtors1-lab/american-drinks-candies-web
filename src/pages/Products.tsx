@@ -81,8 +81,6 @@ const snackProducts2 = [
   },
 ];
 
-
-
 export default function Products() {
   return (
     <div className="min-h-screen bg-background font-sans flex flex-col">
@@ -102,20 +100,14 @@ export default function Products() {
             "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
           ]}
         />
-        <ProductGrid
-          products={drinkProducts4}
-          hoverEffect={true}
-        />
-         <ProductGrid
-          products={drinkProducts4}
-          hoverEffect={true}
-        />
-       
+        <ProductGrid products={drinkProducts4} hoverEffect={true} />
+        <ProductGrid products={drinkProducts4} hoverEffect={true} />
+
         {/* REFRESHING SECTION */}
-                <section className="relative w-full bg-white overflow-hidden flex flex-col">
-                  <div className="relative flex items-center justify-center py-24">
-                    <span
-                      className="
+        <section className="relative w-full bg-white overflow-hidden flex flex-col">
+          <div className="relative flex items-center justify-center py-24">
+            <span
+              className="
                                 absolute inset-0 flex items-center justify-center
                                 text-[10rem] md:text-[180px]
                                 font-extrabold uppercase
@@ -123,43 +115,34 @@ export default function Products() {
                                 select-none pointer-events-none
                                 whitespace-nowrap
                               "
-                    >
-                      Drinks
-                    </span>
-        
-                    <h2
-                      className="
+            >
+              Drinks
+            </span>
+
+            <h2
+              className="
                                   relative z-10
                                   text-5xl md:text-6xl lg:text-7xl
                                   font-display font-bold uppercase
                                   text-center
                                 "
-                    >
-                      <span className="text-black"></span>{" "}
-                      <span className="text-primary">Drinks</span>
-                    </h2>
-                  </div>
-        
-                  <div className="relative w-full">
-                    <ProductGrid
-          products={drinkProducts4}
-          hoverEffect={false}
-        />
-        <ProductGrid
-          products={drinkProducts4}
-          hoverEffect={false}
-        />
-        <ProductGrid
-          products={drinkProducts3}
-          hoverEffect={false}
-        />
-                  </div>
-                </section>
-                  {/* REFRESHING SECTION */}
-                <section className="relative w-full bg-white overflow-hidden flex flex-col">
-                  <div className="relative flex items-center justify-center py-24">
-                    <span
-                      className="
+            >
+              <span className="text-black"></span>{" "}
+              <span className="text-primary">Drinks</span>
+            </h2>
+          </div>
+
+          <div className="relative w-full">
+            <ProductGrid products={drinkProducts4} hoverEffect={false} />
+            <ProductGrid products={drinkProducts4} hoverEffect={false} />
+            <ProductGrid products={drinkProducts3} hoverEffect={false} />
+          </div>
+        </section>
+        {/* REFRESHING SECTION */}
+        <section className="relative w-full bg-white overflow-hidden flex flex-col">
+          <div className="relative flex items-center justify-center py-24">
+            <span
+              className="
                                 absolute inset-0 flex items-center justify-center
                                 text-[10rem] md:text-[180px]
                                 font-extrabold uppercase
@@ -167,35 +150,31 @@ export default function Products() {
                                 select-none pointer-events-none
                                 whitespace-nowrap
                               "
-                    >
-                      Snacks
-                    </span>
-        
-                    <h2
-                      className="
+            >
+              Snacks
+            </span>
+
+            <h2
+              className="
                                   relative z-10
                                   text-5xl md:text-6xl lg:text-7xl
                                   font-display font-bold uppercase
                                   text-center
                                 "
-                    >
-                      <span className="text-black"></span>{" "}
-                      <span className="text-primary">Snacks</span>
-                    </h2>
-                  </div>
-        
-                  <div className="relative w-full">
-                    <ProductGrid
-          products={snackProducts2}
-          hoverEffect={false}
-        />
-       
-                  </div>
-                </section>
-                 {/* Brand SECTION */}
+            >
+              <span className="text-black"></span>{" "}
+              <span className="text-primary">Snacks</span>
+            </h2>
+          </div>
+
+          <div className="relative w-full">
+            <ProductGrid products={snackProducts2} hoverEffect={false} />
+          </div>
+        </section>
+        {/* Brand SECTION */}
         <BrandsSection />
       </main>
- {/* CTA SECTION */}
+      {/* CTA SECTION */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
