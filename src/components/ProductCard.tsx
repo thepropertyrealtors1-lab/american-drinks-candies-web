@@ -13,8 +13,8 @@ export function ProductCard({ product, category }: ProductCardProps) {
       {/* Image Container */}
       <div className="relative aspect-[4/3] bg-gray-50 overflow-hidden">
         {/* Placeholder image logic - in production use real images */}
-        <img 
-          src={product.imageUrl} 
+        <img
+          src={product.imageUrl}
           alt={product.name}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
@@ -39,12 +39,15 @@ export function ProductCard({ product, category }: ProductCardProps) {
         <p className="text-gray-500 text-sm line-clamp-2 mb-4 flex-grow">
           {product.description}
         </p>
-        
+
         <div className="pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
           <span className="font-mono text-sm font-semibold text-gray-700">
             {product.price || "Contact for Price"}
           </span>
-          <Link href={`/quote?product=${encodeURIComponent(product.name)}`} className="text-primary font-bold text-sm uppercase tracking-wide flex items-center gap-1 group-hover:gap-2 transition-all">
+          <Link
+            href={`/contact?product=${encodeURIComponent(product.name)}`}
+            className="text-primary font-bold text-sm uppercase tracking-wide flex items-center gap-1 group-hover:gap-2 transition-all"
+          >
             Get Quote <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

@@ -193,7 +193,7 @@ export default function Products() {
           </h2>
 
           <a
-            href="/quote"
+            href="/contact"
             className="inline-block bg-primary text-white px-12 py-5 font-bold uppercase tracking-widest"
           >
             Request Pricing

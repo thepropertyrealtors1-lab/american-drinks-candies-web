@@ -72,7 +72,7 @@ export default function HeroSection({
         {showButton && (
           <>
             <a
-              href="/quote"
+              href="/contact"
               className="inline-block mt-8 bg-orange-500 hover:bg-orange-600 text-black font-extrabold uppercase px-10 py-4 tracking-widest"
             >
               Request Pricing

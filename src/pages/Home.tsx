@@ -177,7 +177,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/quote"
+                  href="/contact"
                   className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded font-bold uppercase tracking-widest transition-all"
                 >
                   Request Pricing
@@ -364,7 +364,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-6 items-center">
                 <Link
-                  href="/quote"
+                  href="/contact"
                   className="bg-primary text-white px-10 py-4 rounded font-bold uppercase tracking-widest shadow-lg shadow-primary/20 transition-all"
                 >
                   Request Pricing
@@ -418,7 +418,7 @@ export default function Home() {
             </h2>
 
             <Link
-              href="/quote"
+              href="/contact"
               className="inline-block bg-primary text-white px-12 py-5 font-bold uppercase tracking-widest"
             >
               Request Pricing

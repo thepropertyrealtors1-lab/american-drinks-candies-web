@@ -13,12 +13,11 @@ export default function ProductSlider({ items, hoverEffect = "back" }) {
         };
   return (
     <section
-  className="grid h-[600px]"
-  style={{
-    gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`,
-  }}
->
-
+      className="grid h-[600px]"
+      style={{
+        gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`,
+      }}
+    >
       {items.map((item) => (
         <motion.div
           key={item.id}
