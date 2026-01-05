@@ -17,7 +17,7 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-black border-b border-primary/20 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
+        <div className="grid grid-cols-3 items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="group flex items-center gap-2">
@@ -28,7 +28,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 text-center">
             {links.map((link) => (
               <Link 
                 key={link.href} 
@@ -41,11 +41,13 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            </div>
+            <div className="hidden md:flex justify-end">
             <Link 
               href="/quote" 
               className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded font-bold uppercase tracking-wide text-sm shadow-lg transition-all"
             >
-              Request Pricing
+              (954) 604-2925
             </Link>
           </div>
 
