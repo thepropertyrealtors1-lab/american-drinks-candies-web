@@ -2,6 +2,8 @@ import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "../assets/images/logo/logo.png";
+import "../assets/scss/Navbar.css";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +21,9 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 items-center h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="group flex items-center gap-2">
-              <span className="font-display text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter">
-                AMERICAN<span className="text-primary"> DRINKS</span>
-              </span>
+          <div>
+            <Link href="/">
+              <img src={logo} className="logo" />
             </Link>
           </div>
 

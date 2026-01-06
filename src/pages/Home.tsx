@@ -168,7 +168,7 @@ export default function Home() {
               className="text-white"
             >
               <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight uppercase">
-                American <br />
+                <span className="text-white">American</span> <br />
                 <span className="text-primary">Drinks & Candies</span>
               </h1>
               <p className="text-xl text-gray-200 mb-8 max-w-xl leading-relaxed">
