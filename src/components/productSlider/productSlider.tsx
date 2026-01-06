@@ -1,39 +1,62 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function ProductSlider({ items, hoverEffect = "back" }) {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+ useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const hoverConfig =
     hoverEffect === "front"
       ? {
-          hoverScale: 1.2,
+          hoverScale: 1.5,
           hoverY: 150,
         }
       : {
-          hoverScale: 0.9,
+          hoverScale: 0.8,
           hoverY: 10,
         };
   return (
     <section
-      className="grid h-[600px]"
-      style={{
-        gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`,
-      }}
+     className="
+        grid h-auto md:h-[600px]
+        grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(0,1fr))]
+      "
+      // style={{
+      //   gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`,
+      // }}
     >
-      {items.map((item) => (
+      {items.map((item, index) => {
+        const isActive = activeIndex === index;
+ return(
         <motion.div
           key={item.id}
           className="relative overflow-hidden flex items-end justify-center"
           style={{ backgroundColor: item.bgColor }}
           initial="rest"
           whileHover="hover"
-          animate="rest"
+          animate={isActive ? "hover" : "rest"}
+          onClick={() =>
+              setActiveIndex(isActive ? null : index)
+            }
+
         >
           <motion.img
             src={item.imageUrl}
             alt={item.name}
             variants={{
               rest: {
-                y: 320,
-                scale: 1.05,
+                y: isMobile ? 120 : 320,
+                scale: 1,
               },
               hover: {
                 y: hoverConfig.hoverY,
@@ -45,7 +68,7 @@ export default function ProductSlider({ items, hoverEffect = "back" }) {
               ease: [0.19, 1, 0.22, 1],
             }}
             className="
-              h-[720px] object-contain
+              h-[420px] md:h-[720px] object-contain
               drop-shadow-none
               group-hover:drop-shadow-[0_40px_60px_rgba(0,0,0,0.35)]
               transition-shadow duration-700
@@ -85,7 +108,7 @@ export default function ProductSlider({ items, hoverEffect = "back" }) {
             {item.cta || "Get Energy"}
           </motion.button>
         </motion.div>
-      ))}
+)})}
     </section>
   );
 }

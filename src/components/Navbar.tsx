@@ -23,7 +23,7 @@ export function Navbar() {
           {/* Logo */}
           <div>
             <Link href="/">
-              <img src={logo} className="logo" />
+              <img src={logo} className="h-12 max-w-60 object-contain md:logo" />
             </Link>
           </div>
 
@@ -52,10 +52,10 @@ export function Navbar() {
           </div>
 
           {/* Mobile Button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center justify-end md:hidden col-start-3">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-gray-300 hover:text-white focus:outline-none right-1"
             >
               {isOpen ? (
                 <X className="h-8 w-8" />

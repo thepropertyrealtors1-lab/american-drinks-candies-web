@@ -218,12 +218,12 @@ export default function Home() {
         </section>
 
         {/* REFRESHING SECTION */}
-        <section className="relative w-full bg-white overflow-hidden flex flex-col pb-32">
-          <div className="relative flex items-center justify-center py-24">
+        <section className="relative w-full bg-white overflow-hidden flex flex-col md:pb-32">
+          <div className="relative flex items-center justify-center py-7 md:py-24">
             <span
               className="
                         absolute inset-0 flex items-center justify-center
-                        text-[10rem] md:text-[180px]
+                        text-[2.3rem] sm:text-[4rem] md:text-[8rem] lg:text-[180px]
                         font-extrabold uppercase
                         text-gray-100
                         select-none pointer-events-none
@@ -236,7 +236,7 @@ export default function Home() {
             <h2
               className="
                           relative z-10
-                          text-5xl md:text-6xl lg:text-7xl
+                          text-4xl md:text-6xl lg:text-7xl
                           font-display font-bold uppercase
                           text-center
                         "
@@ -253,11 +253,11 @@ export default function Home() {
 
         {/* POWER UP SECTION back*/}
         <div className="relative w-full bg-white overflow-hidden flex flex-col ">
-          <div className="relative flex items-center justify-center py-10 mb-10">
+          <div className="relative flex items-center justify-center py-5 md:py-10 mb-10">
             <span
               className="
                         absolute inset-0 flex items-center justify-center
-                        md:text-[150px]
+                        text-[2.3rem] sm:text-[4rem] md:text-[8rem] lg:text-[180px]
                         font-extrabold uppercase
                         text-gray-100
                         select-none pointer-events-none
@@ -270,7 +270,7 @@ export default function Home() {
             <h2
               className="
                           relative z-10
-                          text-5xl md:text-6xl lg:text-7xl
+                          text-3xl md:text-6xl lg:text-7xl
                           font-display font-bold uppercase
                           text-center
                         "
@@ -288,7 +288,7 @@ export default function Home() {
             <span
               className="
                         absolute inset-0 flex items-center justify-center
-                        text-[10rem] md:text-[180px]
+                        text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[180px]
                         font-extrabold uppercase
                         text-gray-100
                         select-none pointer-events-none
@@ -301,7 +301,7 @@ export default function Home() {
             <h2
               className="
                           relative z-10
-                          text-5xl md:text-6xl lg:text-7xl
+                          text-4xl md:text-6xl lg:text-7xl
                           font-display font-bold uppercase
                           text-center
                         "
@@ -321,7 +321,7 @@ export default function Home() {
             <span
               className="
                         absolute inset-0 flex items-center justify-center
-                        md:text-[150px]
+                        text-[4rem] sm:text-[5rem] md:text-[10rem] lg:text-[180px]
                         font-extrabold uppercase
                         text-gray-100
                         select-none pointer-events-none
@@ -334,7 +334,7 @@ export default function Home() {
             <h2
               className="
                           relative z-10
-                          text-5xl md:text-6xl lg:text-7xl
+                          text-4xl md:text-6xl lg:text-7xl
                           font-display font-bold uppercase
                           text-center
                         "
