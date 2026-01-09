@@ -16,6 +16,10 @@ import { useState } from "react";
 import ProductSwiper from "@/components/productSwiper/productSwiper";
 import ProductSlider from "@/components/productSlider/productSlider";
 import BrandsSection from "@/components/BrandSection";
+import img1 from "../assets/images/drinks/1.png";
+import img2 from "../assets/images/snacks/1.png";
+import img3 from "../assets/images/snacks/10.png";
+
 const sliderProducts = [
   {
     id: 1,
@@ -195,20 +199,17 @@ export default function Home() {
             >
               <div className="grid grid-cols-3 gap-4">
                 <img
-                  src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png"
-                  alt="Ghost"
+                  src={img1}
                   className="animate-bounce"
                   style={{ animationDuration: "3s" }}
                 />
                 <img
-                  src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/takis.png"
-                  alt="Takis"
+                  src={img2}
                   className="animate-bounce"
                   style={{ animationDuration: "4s" }}
                 />
                 <img
-                  src="https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png"
-                  alt="Monster"
+                  src={img3}
                   className="animate-bounce"
                   style={{ animationDuration: "5s" }}
                 />
