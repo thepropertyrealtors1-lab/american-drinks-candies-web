@@ -1,72 +1,86 @@
+import { validateHeaderValue } from "http";
+import img1 from "../assets/images/brands/50.png";
+import img2 from "../assets/images/brands/51.png";
+import img3 from "../assets/images/brands/52.png";
+import img4 from "../assets/images/brands/53.png";
+import img5 from "../assets/images/brands/54.png";
+import img6 from "../assets/images/brands/55.png";
+import img7 from "../assets/images/brands/56.png";
+import img8 from "../assets/images/brands/57.png";
+import img9 from "../assets/images/brands/58.png";
+import img10 from "../assets/images/brands/66.png";
+import img11 from "../assets/images/brands/60.png";
+import img12 from "../assets/images/brands/61.png";
+import img13 from "../assets/images/brands/62.png";
+import img14 from "../assets/images/brands/63.png";
+import img15 from "../assets/images/brands/64.png";
+import img16 from "../assets/images/brands/65.png";
+
 export default function BrandsSection() {
   const brands = [
     {
       name: "Celsius",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/celsius.png",
+      logo: img1,
     },
     {
       name: "Red Bull",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/redbull.png",
+      logo: img2,
     },
     {
       name: "Ghost",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost.png",
+      logo: img3,
     },
     {
       name: "Prime",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/prime.png",
+      logo: img4,
     },
     {
       name: "FIJI",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/fiji.png",
+      logo: img5,
     },
     {
       name: "Essentia",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/essentia.png",
+      logo: img6,
     },
     {
       name: "Evian",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/evian.png",
+      logo: img7,
     },
     {
       name: "Dasani",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/dasani.png",
+      logo: img8,
     },
     {
       name: "Aquafina",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/aquafina.png",
+      logo: img9,
     },
     {
       name: "Yoohoo",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/yoohoo.png",
+      logo: img10,
     },
     {
       name: "Mystic",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/mystic.png",
+      logo: img11,
     },
     {
       name: "Fanta",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/fanta.png",
+      logo: img12,
     },
     {
       name: "Minute Maid",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/minute-maid.png",
+      logo: img13,
     },
     {
       name: "Pepsi",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/pepsi.png",
+      logo: img14,
     },
     {
       name: "Dr Pepper",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/dr-pepper.png",
+      logo: img15,
     },
     {
       name: "7UP",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/7up.png",
-    },
-    {
-      name: "Gatorade",
-      logo: "https://sipnsnackinternational.com/wp-content/uploads/2024/06/gatorade.png",
+      logo: img16,
     },
   ];
 
