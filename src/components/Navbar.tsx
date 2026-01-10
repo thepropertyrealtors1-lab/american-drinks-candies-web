@@ -23,7 +23,10 @@ export function Navbar() {
           {/* Logo */}
           <div>
             <Link href="/">
-              <img src={logo} className="h-12 max-w-60 object-contain md:logo" />
+              <img
+                src={logo}
+                className="h-17 max-w-60 object-contain md:logo"
+              />
             </Link>
           </div>
 

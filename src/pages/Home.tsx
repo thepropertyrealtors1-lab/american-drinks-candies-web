@@ -20,111 +20,213 @@ import img1 from "../assets/images/drinks/1.png";
 import img2 from "../assets/images/snacks/1.png";
 import img3 from "../assets/images/snacks/10.png";
 
+// drinks
+import img4 from "../assets/images/drinks/2.png";
+import img5 from "../assets/images/drinks/3.png";
+import img6 from "../assets/images/drinks/4.png";
+import img7 from "../assets/images/drinks/5.png";
+import img8 from "../assets/images/drinks/8.png";
+import img9 from "../assets/images/drinks/1.png";
+import img10 from "../assets/images/drinks/7.png";
+import img11 from "../assets/images/drinks/6.png";
+import img12 from "../assets/images/drinks/9.png";
+
+// snacks
+import img13 from "../assets/images/snacks/2.png";
+import img14 from "../assets/images/snacks/3.png";
+import img15 from "../assets/images/snacks/4.png";
+import img16 from "../assets/images/snacks/5.png";
+import img17 from "../assets/images/snacks/1.png";
+import img18 from "../assets/images/snacks/6.png";
+import img19 from "../assets/images/snacks/10.png";
+import img20 from "../assets/images/snacks/7.png";
+import img21 from "../assets/images/snacks/8.png";
+import img22 from "../assets/images/snacks/11.png";
+
+import img23 from "../assets/images/snacks/1.png";
+import img24 from "../assets/images/snacks/4.png";
+import img25 from "../assets/images/drinks/11.png";
+import img26 from "../assets/images/drinks/10.png";
+import img27 from "../assets/images/drinks/13.png";
+import img28 from "../assets/images/drinks/15.png";
+
+import img29 from "../assets/images/others/1.png";
+import img30 from "../assets/images/others/2.png";
+import img31 from "../assets/images/others/3.png";
+import img32 from "../assets/images/others/4.png";
+
 const sliderProducts = [
   {
     id: 1,
-    name: "Coca-Cola",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/coca-cola.png",
+    name: "",
+    imageUrl: img1,
   },
   {
     id: 2,
-    name: "Fanta",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/fanta.png",
+    name: "",
+    imageUrl: img4,
   },
   {
     id: 3,
-    name: "Pepsi",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/pepsi.png",
+    name: "",
+    imageUrl: img5,
   },
   {
     id: 4,
-    name: "Dr Pepper",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/dr-pepper.png",
+    name: "",
+    imageUrl: img6,
   },
   {
     id: 5,
-    name: "Celsius",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/celsius.png",
+    name: "",
+    imageUrl: img7,
   },
   {
     id: 6,
-    name: "Dr Pepper",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/dr-pepper.png",
+    name: "",
+    imageUrl: img8,
+  },
+  {
+    id: 7,
+    name: "",
+    imageUrl: img9,
+  },
+  {
+    id: 8,
+    name: "",
+    imageUrl: img10,
+  },
+  {
+    id: 9,
+    name: "",
+    imageUrl: img11,
+  },
+  {
+    id: 10,
+    name: "",
+    imageUrl: img12,
   },
 ];
-const energyProducts2 = [
+
+const sliderProducts2 = [
   {
     id: 1,
-    name: "Monster",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-    bgColor: "#8DC63F",
+    name: "",
+    imageUrl: img13,
   },
   {
     id: 2,
-    name: "Red Bull",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/redbull.png",
-    bgColor: "#1F2A44",
+    name: "",
+    imageUrl: img14,
+  },
+  {
+    id: 3,
+    name: "",
+    imageUrl: img15,
+  },
+  {
+    id: 4,
+    name: "",
+    imageUrl: img16,
+  },
+  {
+    id: 5,
+    name: "",
+    imageUrl: img17,
+  },
+  {
+    id: 6,
+    name: "",
+    imageUrl: img18,
+  },
+  {
+    id: 7,
+    name: "",
+    imageUrl: img19,
+  },
+  {
+    id: 8,
+    name: "",
+    imageUrl: img20,
+  },
+  {
+    id: 9,
+    name: "",
+    imageUrl: img21,
+  },
+  {
+    id: 10,
+    name: "",
+    imageUrl: img22,
+  },
+];
+
+const energyProducts2 = [
+  {
+    id: 1,
+    name: "Cheetos",
+    imageUrl: img23,
+    bgColor: "#19814f",
+    cta: "Get Cheetos",
+  },
+  {
+    id: 2,
+    name: "Burger Rings",
+    imageUrl: img24,
+    bgColor: "#e80f0e",
+    cta: "Get Burger Rings",
   },
 ];
 const energyProducts4 = [
   {
     id: 1,
-    name: "Monster",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-    bgColor: "#8DC63F",
+    name: "OxyShred",
+    imageUrl: img11,
+    bgColor: "#58d3e1",
+    cta: "Get OxyShred",
   },
   {
     id: 2,
-    name: "Red Bull",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/redbull.png",
-    bgColor: "#1F2A44",
+    name: "Juice Monster",
+    imageUrl: img28,
+    bgColor: "#ff66c4",
+    cta: "Get Monster",
   },
   {
     id: 3,
-    name: "Ghost",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png",
-    bgColor: "#9E1B32",
+    name: "Liquid Death",
+    imageUrl: img26,
+    bgColor: "#b9a357",
   },
   {
     id: 4,
-    name: "Celsius",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/celsius.png",
-    bgColor: "#FFD200",
+    name: "Monster Punch",
+    imageUrl: img27,
+    bgColor: "#FF0000",
+    cta: "Get Monster",
   },
 ];
 const energyProducts3 = [
   {
     id: 1,
-    name: "Monster",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+    name: "C4 Energy",
+    imageUrl: img25,
     bgColor: "#8DC63F",
+    cta: "Get C4 Energy",
   },
   {
     id: 2,
-    name: "Red Bull",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/redbull.png",
-    bgColor: "#1F2A44",
+    name: "Root Beer",
+    imageUrl: img1,
+    bgColor: "#af8a6f",
+    cta: "Get Root Beer",
   },
   {
     id: 3,
-    name: "Ghost",
-    imageUrl:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/ghost-energy.png",
-    bgColor: "#9E1B32",
+    name: "Pepsi",
+    imageUrl: img4,
+    bgColor: "#231d5e",
+    cta: "Get Pepsi",
   },
 ];
 
@@ -307,13 +409,13 @@ export default function Home() {
                           text-center
                         "
             >
-              <span className="text-black">Water Brands</span>{" "}
+              <span className="text-black">Snack Items</span>{" "}
               <span className="text-primary">We Deliver</span>
             </h2>
           </div>
 
           <div className="relative w-full">
-            <ProductSwiper products={sliderProducts} />
+            <ProductSwiper products={sliderProducts2} />
           </div>
         </section>
         {/* POWER UP SECTION front*/}
@@ -379,22 +481,10 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img
-                src="https://sipnsnackinternational.com/wp-content/uploads/2025/08/Global-Beverage-Snack-Exporter-service-near-me-3.jpg"
-                className="rounded shadow-lg"
-              />
-              <img
-                src="https://sipnsnackinternational.com/wp-content/uploads/2025/08/Global-Beverage-Snack-Exporter-service-near-me-4.jpg"
-                className="rounded shadow-lg"
-              />
-              <img
-                src="https://sipnsnackinternational.com/wp-content/uploads/2025/08/Global-Beverage-Snack-Exporter-service-near-me-1.webp"
-                className="rounded shadow-lg"
-              />
-              <img
-                src="https://sipnsnackinternational.com/wp-content/uploads/2025/08/Global-Beverage-Snack-Exporter-service-near-me-2.webp"
-                className="rounded shadow-lg"
-              />
+              <img src={img29} className="rounded shadow-lg" />
+              <img src={img30} className="rounded shadow-lg" />
+              <img src={img31} className="rounded shadow-lg" />
+              <img src={img32} className="rounded shadow-lg" />
             </div>
           </div>
         </section>

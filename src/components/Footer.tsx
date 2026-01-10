@@ -16,11 +16,11 @@ export function Footer() {
             </div>
             <div className="space-y-4">
               <a
-                href="mailto:sales@americandrinks.com"
+                href="mailto:hello@americandrinksandcandies.com"
                 className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors group text-sm"
               >
                 <Mail className="h-4 w-4 text-primary" />
-                <span>sales@americandrinks.com</span>
+                <span>hello@americandrinksandcandies.com</span>
               </a>
               <a
                 href="tel:19546042925"
@@ -260,7 +260,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-16 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-xs text-gray-500">
           <p>All Rights Reserved. American Drinks & Candies</p>
-          <p className="text-center">
+          {/* <p className="text-center">
             This site is protected by reCAPTCHA and the Google
             <a
               href="#"
@@ -276,13 +276,7 @@ export function Footer() {
               Terms of Service
             </a>{" "}
             apply
-          </p>
-          <p>
-            American Drinks & Candies Design By:{" "}
-            <span className="text-primary font-bold uppercase">
-              Replit Agent
-            </span>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>

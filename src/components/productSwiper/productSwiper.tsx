@@ -54,7 +54,7 @@ export default function ProductSwiper({ products }) {
             <div className="group relative flex flex-col items-center cursor-pointer">
               <img
                 src={product.imageUrl}
-                alt={product.name}
+                // alt={product.name}
                 className="h-52 object-contain transition-transform duration-300"
               />
 
