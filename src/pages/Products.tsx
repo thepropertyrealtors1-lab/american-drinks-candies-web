@@ -8,76 +8,162 @@ import { useLocation } from "wouter";
 import HeroSection from "@/components/HeroSecction";
 import BrandsSection from "@/components/BrandSection";
 import { ProductGrid } from "@/components/ProductGrid";
+import img1 from "../assets/images/groups/68.png";
+import img2 from "../assets/images/groups/69.png";
+import img3 from "../assets/images/groups/70.png";
+import img4 from "../assets/images/groups/71.png";
+import img5 from "../assets/images/groups/72.png";
+import img6 from "../assets/images/groups/73.png";
+import img7 from "../assets/images/drinks/5.png";
+import img8 from "../assets/images/drinks/3.png";
+import img9 from "../assets/images/snacks/9.png";
+import img10 from "../assets/images/snacks/6.png";
 
-const drinkProducts4 = [
+import drink1 from "../assets/images/drinks/1.png";
+import drink2 from "../assets/images/drinks/2.png";
+import drink3 from "../assets/images/drinks/9.png";
+import drink4 from "../assets/images/drinks/5.png";
+import drink5 from "../assets/images/drinks/6.png";
+import drink6 from "../assets/images/drinks/10.png";
+import drink7 from "../assets/images/drinks/11.png";
+import drink8 from "../assets/images/drinks/12.png";
+
+import snack1 from "../assets/images/snacks/1.png";
+import snack2 from "../assets/images/snacks/2.png";
+import snack3 from "../assets/images/snacks/9.png";
+import snack4 from "../assets/images/snacks/4.png";
+import snack5 from "../assets/images/snacks/10.png";
+import snack6 from "../assets/images/snacks/6.png";
+import snack7 from "../assets/images/snacks/7.png";
+import snack8 from "../assets/images/snacks/8.png";
+
+const groupProducts1 = [
   {
     id: "1",
-    name: "Monster Energy Original",
-    hoverName: "Original",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+    name: "Monster Energy",
+    hoverName:
+      "Bad Apple, VR 46, Mixxd, Lando Noris, Feltolt, Dipper, Papillon",
+    image: img1,
   },
   {
     id: "2",
-    name: "Monster Energy Zero",
-    hoverName: "Zero Sugar",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy-zero.png",
+    name: "Snacks",
+    hoverName:
+      "Burger Rings, Cheetos, BlueBird, Herrs, Honey Cheese, Jalepeno Poppers, Creamy Ranch",
+    image: img2,
   },
   {
     id: "3",
-    name: "Monster Energy Ultra",
-    hoverName: "Ultra",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy-ultra.png",
+    name: "Chupa Chups",
+    hoverName: "Bubble Gum, Watermelon, Cherry Bubble Gum, Sour",
+    image: img3,
+  },
+];
+
+const groupProducts2 = [
+  {
+    id: "1",
+    name: "Takis Snack",
+    hoverName: "Nitro, Intense Takis, Fuego, Blue Heat, Chile Lenon",
+    image: img4,
   },
   {
-    id: "4",
-    name: "Monster Energy Mango Loco",
-    hoverName: "Mango",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy-mango.png",
+    id: "2",
+    name: "Candy Lips Soda",
+    hoverName: "Bubble Gum, Watermelon Slice, Peach, Cotton Candy, Sour Grape",
+    image: img5,
+  },
+  {
+    id: "3",
+    name: "Energy Drink",
+    hoverName: "C4 Energy Drink",
+    image: img6,
   },
 ];
 
 const drinkProducts3 = [
   {
     id: "1",
-    name: "Monster Energy Original",
-    hoverName: "Original",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
+    name: "Mug Root Beer",
+    image: drink1,
   },
   {
     id: "2",
-    name: "Monster Energy Zero",
-    hoverName: "Zero Sugar",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy-zero.png",
+    name: "Pepsi",
+    image: drink2,
   },
   {
     id: "3",
-    name: "Monster Energy Ultra",
-    hoverName: "Ultra",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy-ultra.png",
+    name: "Blue Cream Soda",
+    image: drink3,
+  },
+  {
+    id: "4",
+    name: "Brain Licker",
+    image: drink4,
+  },
+  {
+    id: "5",
+    name: "OxyShred",
+    image: drink5,
+  },
+  {
+    id: "6",
+    name: "Liquid Death",
+    image: drink6,
+  },
+  {
+    id: "7",
+    name: "C4 Energy",
+    image: drink7,
+  },
+  {
+    id: "8",
+    name: "Big Fizz",
+    image: drink8,
   },
 ];
 
 const snackProducts2 = [
   {
     id: "1",
-    name: "Doritos Nacho Cheese",
-    hoverName: "Nacho",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/doritos-nacho-cheese.png",
+    name: "Cheetos",
+    image: snack1,
   },
   {
     id: "2",
-    name: "Cheetos Crunchy",
-    hoverName: "Crunchy",
-    image:
-      "https://sipnsnackinternational.com/wp-content/uploads/2024/06/cheetos-crunchy.png",
+    name: "Honey Butter Popcorn",
+    image: snack2,
+  },
+  {
+    id: "3",
+    name: "Jelly Babies",
+    image: snack3,
+  },
+  {
+    id: "4",
+    name: "Burger Rings",
+    image: snack4,
+  },
+  {
+    id: "5",
+    name: "Millions Candy",
+    image: snack5,
+  },
+  {
+    id: "6",
+    name: "Originals",
+    image: snack6,
+  },
+  {
+    id: "7",
+    name: "Pik Nik",
+    image: snack7,
+  },
+  {
+    id: "8",
+    name: "Potato Skins",
+    image: snack8,
   },
 ];
 
@@ -91,17 +177,11 @@ export default function Products() {
           titleTop="Our"
           titleBottom="Products"
           showButton
-          leftProducts={[
-            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-          ]}
-          rightProducts={[
-            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-          ]}
+          leftProducts={[img7, img9]}
+          rightProducts={[img8, img10]}
         />
-        <ProductGrid products={drinkProducts4} hoverEffect={true} />
-        <ProductGrid products={drinkProducts4} hoverEffect={true} />
+        <ProductGrid products={groupProducts1} hoverEffect={true} />
+        <ProductGrid products={groupProducts2} hoverEffect={true} />
 
         {/* REFRESHING SECTION */}
         <section className="relative w-full bg-white overflow-hidden flex flex-col">
@@ -133,8 +213,8 @@ export default function Products() {
           </div>
 
           <div className="relative w-full">
-            <ProductGrid products={drinkProducts4} hoverEffect={false} />
-            <ProductGrid products={drinkProducts4} hoverEffect={false} />
+            {/* <ProductGrid products={drinkProducts4} hoverEffect={false} /> */}
+            {/* <ProductGrid products={drinkProducts4} hoverEffect={false} /> */}
             <ProductGrid products={drinkProducts3} hoverEffect={false} />
           </div>
         </section>
