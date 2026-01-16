@@ -36,11 +36,14 @@ export function RequestPricingForm() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:3005/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        "https://american-drinks-candies-backend.vercel.app/api/contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
+      );
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Something went wrong");

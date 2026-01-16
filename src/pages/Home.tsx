@@ -257,7 +257,6 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-grow">
-        {/* HERO SECTION - REPLICA OF SIPNSNACK */}
         <section className="relative min-h-[600px] flex items-center bg-black overflow-hidden py-20">
           <div className="absolute inset-0 z-0 opacity-20">
             <img

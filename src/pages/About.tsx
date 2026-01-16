@@ -6,12 +6,15 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "./style.css";
 import "swiper/css";
 import "swiper/css/pagination";
+import img1 from "../assets/images/others/1.png";
+import img2 from "../assets/images/others/2.png";
+import img3 from "../assets/images/others/3.png";
+import img7 from "../assets/images/drinks/11.png";
+import img8 from "../assets/images/drinks/16.png";
+import img9 from "../assets/images/snacks/8.png";
+import img10 from "../assets/images/snacks/4.png";
 
-const images = [
-  "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=1600",
-  "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=1600",
-  "https://images.unsplash.com/photo-1565799557185-cc27f9d9f21b?q=80&w=1600",
-];
+const images = [img1, img2, img3];
 
 export default function About() {
   return (
@@ -23,14 +26,8 @@ export default function About() {
         <HeroSection
           titleTop="About American"
           titleBottom="Drinks"
-          leftProducts={[
-            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-          ]}
-          rightProducts={[
-            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-            "https://sipnsnackinternational.com/wp-content/uploads/2024/06/monster-energy.png",
-          ]}
+          leftProducts={[img7, img9]}
+          rightProducts={[img8, img10]}
         />
 
         {/* ABOUT SPLIT SECTION */}
@@ -53,7 +50,7 @@ export default function About() {
                 </h2>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  SipNSnack International is a bulk beverage and snack
+                  American Drinks and Candies is a bulk beverage and snack
                   distributor for countries outside of the US. We are
                   headquartered in Miami and have warehouses ready to ship
                   globally.
