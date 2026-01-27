@@ -11,6 +11,7 @@ import Contact from "@/pages/Contact";
 import Quote from "@/pages/Quote";
 import "swiper/css";
 import "swiper/css/pagination";
+import ScrollToTop from "./components/ScroolToTop";
 
 function Router() {
   return (
@@ -19,7 +20,6 @@ function Router() {
       <Route path="/products" component={Products} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
-      {/* <Route path="/quote" component={Quote} /> */}
       <Route component={NotFound} />
     </Switch>
   );
@@ -31,6 +31,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <ScrollToTop />
       </TooltipProvider>
     </QueryClientProvider>
   );

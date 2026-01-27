@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "wouter";
 
 export default function ProductSlider({ items, hoverEffect = "back" }) {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -102,7 +103,7 @@ export default function ProductSlider({ items, hoverEffect = "back" }) {
               hover:-translate-y-1
             "
             >
-              {item.cta || "Get Energy"}
+              <Link href="/contact">{item.cta || "Get Energy"}</Link>
             </motion.button>
           </motion.div>
         );
