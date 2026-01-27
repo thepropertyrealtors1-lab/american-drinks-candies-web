@@ -66,6 +66,9 @@ export function Footer() {
                     <li key={item}>
                       <Link
                         href="/products"
+                        onClick={() =>
+                          window.scrollTo({ top: 0, behavior: "smooth" })
+                        }
                         className="text-gray-400 hover:text-primary transition-colors text-sm block"
                       >
                         {item}
