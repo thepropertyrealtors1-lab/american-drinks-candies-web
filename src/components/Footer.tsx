@@ -5,6 +5,7 @@ import {
   FOOTER_PRODUCTS,
   FOOTER_QUICKLINKS,
 } from "../constants/footer.constants.ts";
+import { Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -28,6 +29,27 @@ export function Footer() {
                   <span className="truncate">{label}</span>
                 </a>
               ))}
+            </div>
+
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-4 pt-2">
+              <a
+                href="https://www.instagram.com/american_drinks_and_candies"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <Instagram className="h-6 w-6 text-primary" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/people/American-Drinks-and-Candies-Exporter/61587148469198/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
+                <Facebook className="h-6 w-6 text-primary" />
+              </a>
             </div>
           </div>
 
